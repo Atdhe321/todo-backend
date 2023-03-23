@@ -5,13 +5,13 @@ import { Low } from 'lowdb';
 import { JSONFile } from "lowdb/node";
 import { userRouter } from './routers/users.router.js';
 import { mainErrorHandler, noRouteHandler } from './middlewares/errorHandler.middleware.js';
-import { env } from './config/dev.js';
+import { env } from './config/environment.js';
 // import dotenv from 'dotenv';
-if (process.env.NODE_ENV === 'production') {
-    const env = require('./config/prod.js');
-} else {
-    const env = require('./config/dev.js');
-}
+// if (process.env.NODE_ENV === 'production') {
+//     const env = require('./config/prod.js');
+// } else {
+//     const env = require('./config/dev.js');
+// }
 
 //create app
 const app = express();
